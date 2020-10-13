@@ -56,7 +56,7 @@ COPY assets/pg_hba.conf /etc/postgresql/9.5/main/pg_hba.conf
 RUN sed -i "/^#listen_addresses/i listen_addresses='*'" /etc/postgresql/9.5/main/postgresql.conf
 
 RUN cd /opt/canvas \
-    && git clone https://github.com/aertoria/canvas-lms.git \
+    && git clone https://github.com/instructure/canvas-lms.git \
     && cd canvas-lms \
     && git checkout $REVISION
 
